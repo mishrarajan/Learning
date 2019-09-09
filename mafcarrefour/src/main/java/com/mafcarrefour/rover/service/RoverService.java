@@ -1,7 +1,7 @@
 package com.mafcarrefour.rover.service;
 
-import com.mafcarrefour.rover.entity.Rover;
+import com.mafcarrefour.rover.entity.Plateau;
 
 public interface RoverService {
-	public Rover moveRobo(Rover rover, String movePlan);
+	public void moveRoverOnPlateau(Plateau plateau);
 }

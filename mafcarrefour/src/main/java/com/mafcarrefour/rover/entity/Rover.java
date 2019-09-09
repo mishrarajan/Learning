@@ -1,9 +1,11 @@
 package com.mafcarrefour.rover.entity;
 
 public class Rover {
+	private String name;
 	private int posX;
 	private int posY;
 	private char headFaced;
+	private String movePlan;
 	
 	/**
 	 * To set the initial position of Rover
@@ -11,12 +13,22 @@ public class Rover {
 	 * @param posY
 	 * @param headFaced
 	 */
-	public Rover(int posX, int posY, char headFaced) {
+	public Rover(String name, int posX, int posY, char headFaced, String movePlan) {
+		this.name = name;
 		this.posX = posX;
 		this.posY = posY;
 		this.headFaced = headFaced;
+		this.movePlan = movePlan;
 	}
 	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public int getPosX() {
 		return posX;
 	}
@@ -34,6 +46,14 @@ public class Rover {
 	}
 	public void setHeadFaced(char headFaced) {
 		this.headFaced = headFaced;
+	}
+	
+	public String getMovePlan() {
+		return movePlan;
+	}
+
+	public void setMovePlan(String movePlan) {
+		this.movePlan = movePlan;
 	}
 
 	@Override
