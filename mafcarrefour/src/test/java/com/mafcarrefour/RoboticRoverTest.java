@@ -7,6 +7,8 @@ import org.junit.Test;
 
 import com.mafcarrefour.rover.entity.Plateau;
 import com.mafcarrefour.rover.entity.Rover;
+import com.mafcarrefour.rover.service.Direction;
+import com.mafcarrefour.rover.service.Movement;
 import com.mafcarrefour.rover.service.RoverService;
 import com.mafcarrefour.rover.service.RoverServiceImpl;
 
@@ -29,23 +31,23 @@ public class RoboticRoverTest {
 
 	@Test
 	public void test() {
-		plateau.getRoverList().add(new Rover("Rover-1", 1, 2, 'N',"LMLMLMLMM"));
+		plateau.getRoverList().add(new Rover("Rover-1", 1, 2, Direction.N ,"LMLMLMLMM"));
 		
 		roverService.moveRoverOnPlateau(plateau);
 		
 		Rover rover = plateau.getRoverList().get(0);
 		Assert.assertEquals(rover.getName()+",X :",rover.getPosX(),1);
 		Assert.assertEquals(rover.getName()+",Y :",rover.getPosY(),3);
-		Assert.assertEquals(rover.getName()+",Direction :",rover.getHeadFaced(),'N');
+		Assert.assertEquals(rover.getName()+",Direction :",rover.getDirection(),Direction.N);
 	}
 	@Test
 	public void test1() {
-		plateau.getRoverList().add(new Rover("Rover-2", 3, 3, 'E',"MMRMMRMRRM"));
+		plateau.getRoverList().add(new Rover("Rover-2", 3, 3, Direction.E,"MMRMMRMRRM"));
 		roverService.moveRoverOnPlateau(plateau);
 		Rover rover = plateau.getRoverList().get(0);
 		Assert.assertEquals(rover.getPosX(),5);
 		Assert.assertEquals(rover.getPosY(),1);
-		Assert.assertEquals(rover.getHeadFaced(),'E');
+		Assert.assertEquals(rover.getDirection(), Direction.E);
 	}
 
 }
