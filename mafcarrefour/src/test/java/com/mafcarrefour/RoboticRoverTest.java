@@ -8,7 +8,6 @@ import org.junit.Test;
 import com.mafcarrefour.rover.entity.Plateau;
 import com.mafcarrefour.rover.entity.Rover;
 import com.mafcarrefour.rover.service.Direction;
-import com.mafcarrefour.rover.service.Movement;
 import com.mafcarrefour.rover.service.RoverService;
 import com.mafcarrefour.rover.service.RoverServiceImpl;
 

@@ -34,19 +34,13 @@ public class SalesTest {
 		
 		goodsList = basket.getGoodsList();
 		Goods goods = goodsList.get(0);
-		System.out.println(goods.getName()+": "+ goods.getPrice());
 		Assert.assertEquals(goods.getName(), 12.49f, goods.getPrice(), 0.00f);
 		
 		goods = goodsList.get(1);
-		System.out.println(goods.getName()+": "+ goods.getPrice());
 		Assert.assertEquals(goods.getName(), 16.49f, goods.getPrice(),0.00f);
 		
 		goods = goodsList.get(2);
-		System.out.println(goods.getName()+": "+ goods.getPrice());
 		Assert.assertEquals(goods.getName(), 0.85f, goods.getPrice(), 0.00f);
-		
-		System.out.println("Sales tax: "+ basket.getTotalSalesTax());
-		System.out.println("Total: "+ basket.getBasketAmt());
 		
 		Assert.assertEquals("Sales taxes",1.50f, basket.getTotalSalesTax(), 0.00f);
 		Assert.assertEquals("Total",29.83f, basket.getBasketAmt(), 0.00f);
@@ -62,15 +56,11 @@ public class SalesTest {
 		
 		goodsList = basket.getGoodsList();
 		Goods goods = goodsList.get(0);
-		System.out.println(goods.getName()+": "+ goods.getPrice());
 		Assert.assertEquals(goods.getName(), 10.50f, goods.getPrice(),0.00f);
 		
 		goods = goodsList.get(1);
-		System.out.println(goods.getName()+": "+ goods.getPrice());
 		Assert.assertEquals(goods.getName(), 54.65f, goods.getPrice(),0.00f);
 		
-		System.out.println("Sales tax: "+ basket.getTotalSalesTax());
-		System.out.println("Total: "+ basket.getBasketAmt());
 		Assert.assertEquals("Sales taxes",7.65f, basket.getTotalSalesTax(), 0.00f);
 		Assert.assertEquals("Total",65.15f, basket.getBasketAmt(), 0.00f);
 	}
@@ -87,26 +77,19 @@ public class SalesTest {
 		
 		goodsList = basket.getGoodsList();
 		Goods goods = goodsList.get(0);
-		System.out.println(goods.getName()+": "+ goods.getPrice());
 		Assert.assertEquals(goods.getName(), 32.19f, goods.getPrice(),0.00f);
 		
 		goods = goodsList.get(1);
-		System.out.println(goods.getName()+": "+ goods.getPrice());
 		Assert.assertEquals(goods.getName(), 20.89f, goods.getPrice(),0.00f);
 		
 		goods = goodsList.get(2);
-		System.out.println(goods.getName()+": "+ goods.getPrice());
 		Assert.assertEquals(goods.getName(), 9.75f, goods.getPrice(), 0.00f);
 		
 		goods = goodsList.get(3);
-		System.out.println(goods.getName()+": "+ goods.getPrice());
 		Assert.assertEquals(goods.getName(), 11.85f, goods.getPrice(),0.00f);
-		
-		
-		System.out.println("Sales tax: "+ basket.getTotalSalesTax());
-		System.out.println("Total: "+ basket.getBasketAmt());
+
 		Assert.assertEquals("Sales taxes",6.70f, basket.getTotalSalesTax(), 0.00f);
 		Assert.assertEquals("Total", 74.68f, basket.getBasketAmt(), 0.00f);
 	}
-*/	
+	*/
 }

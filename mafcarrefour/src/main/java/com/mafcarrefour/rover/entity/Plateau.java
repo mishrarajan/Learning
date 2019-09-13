@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Plateau implements Serializable {
+	private static final long serialVersionUID = -1567038238659128094L;
 	
 	private int maxY;
 	private int minX;
